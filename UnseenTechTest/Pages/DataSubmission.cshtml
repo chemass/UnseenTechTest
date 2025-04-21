@@ -1,0 +1,9 @@
+﻿   @page
+   @model UnseenTechTest.Pages.DataSubmissionModel
+<h2>Data Submission</h2>
+<form method="post">
+    <input type="text" name="Sentence" placeholder="Enter a sentence" required />@*  min="1" maxlength="500" /> *@
+    <button type="submit">Submit</button>
+    <span asp-validation-for="Sentence" class="text-danger"></span>
+</form>
+<p>@Model.Message</p>

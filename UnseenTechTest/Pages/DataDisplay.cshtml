@@ -1,0 +1,13 @@
+﻿   @page
+   @model UnseenTechTest.Pages.DataDisplayModel
+<h2>Data Display</h2>
+<form method="get">
+    <input type="text" name="SearchTerm" placeholder="Search for a word" value="@Model.SearchTerm" />
+    <button type="submit">Search</button>
+</form>
+<ul>
+    @foreach (var word in Model.Words)
+    {
+        <li>@word</li>
+    }
+</ul>
